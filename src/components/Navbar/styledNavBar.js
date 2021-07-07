@@ -5,7 +5,7 @@ import { Link as LinkScroll } from "react-scroll";
 export const Nav = styled.nav`
   background: black;
   height: 80px;
-  ${"" /* margin-top: -80px; */}
+  margin-top: -11px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,15 +45,14 @@ export const NavLogo = styled(LinkRouter)`
   -moz-transform: translateY(-50%);
   transform: translateY(-50%);
 
-@media screen and (max-width: 760px) {
-  display: block;
-  margin-left: 35%;
-  ${'' /* margin-right: 50%;  */}
-  ${'' /* display: flex; */}
+  @media screen and (max-width: 760px) {
+    display: block;
+    margin-left: 35%;
+    ${"" /* margin-right: 50%;  */}
+    ${"" /* display: flex; */}
   justify-content: center;
-  align-items: center;
-}
-
+    align-items: center;
+  }
 `;
 
 export const MobileIcon = styled.div`
