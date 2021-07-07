@@ -95,7 +95,7 @@ export const NavLinks = styled(LinkScroll)`
   height: 100%;
 
   &.active {
-    border-bottom: 3px solid red;
+    border-bottom: 3px solid white;
   }
 `;
 
