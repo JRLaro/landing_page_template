@@ -17,7 +17,7 @@ const Navbar = ({ toggle }) => {
     <Fragment>
       <Nav>
         <NavContainer>
-          <NavLogo to="#!">Logo</NavLogo>
+          <NavLogo to="/">Logo</NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
@@ -32,7 +32,7 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="services">Services</NavLinks>
             </NavItems>
             <NavItems>
-              <NavLinks to="signup">Sign Up</NavLinks>
+              <NavLinks to="register">Register</NavLinks>
             </NavItems>
           </NavMenu>
           <NavBtn>
