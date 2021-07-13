@@ -18,7 +18,7 @@ export const SidebarContainer = styled.aside`
   top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
 `;
 export const CloseIcon = styled(FaTimes)`
-  color: red;
+  color: #F9A826;
 `;
 
 export const Icon = styled.div`
@@ -41,7 +41,7 @@ export const SidebarMenu = styled.ul`
   grid-template-rows: repeat(6, 80px);
   text-align: center;
 
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 480px) {
     grid-template-rows: repeat(6, 60px);
   }
 `;
@@ -54,9 +54,7 @@ export const SidebarLinks = styled(LinkScroll)`
   text-decoration: none;
   list-style: none;
   transition: .2s ease-in-out;
-  ${"" /* padding: 0 1rem; */}
   cursor: pointer;
-  ${"" /* height: 100%; */}
 
   &:hover {
     color: #F9A826;
@@ -74,6 +72,7 @@ export const SidebarRoute = styled(LinkRouter)`
   border-radius: 50px;
   text-decoration: none;
   color: #010606;
+  border: none;
   outline: none;
   padding: 16px 64px;
   white-space: nowrap;

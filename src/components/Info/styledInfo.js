@@ -11,7 +11,8 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 990px;
+  /* height: 990px; */
+  height: 860px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -50,7 +51,7 @@ export const TextWrapper = styled.div`
 export const TopLine = styled.p`
   color: #f9a826;
   font-size: 16px;
-  /* line-weight: 16px; */
+  line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
@@ -69,7 +70,7 @@ export const Heading = styled.h1`
 `;
 export const Subtitle = styled.p`
   max-width: 440px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
   color: ${({ darkText }) => (darkText ? `#010606` : `white`)};

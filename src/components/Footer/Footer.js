@@ -1,19 +1,19 @@
 import React from "react";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from "react-icons/fa";
 import {
-  FooterContainer,
-  FooterWrapper,
-  FooterLinks,
-  FooterLinkWrapper,
-  FooterLinkItems,
-  FooterLinkTitle,
-  FooterLink,
+  FooterContainer, FooterLink, FooterLinkItems, FooterLinksContainer, FooterLinkTitle, FooterLinkWrapper, FooterWrapper, SocialMedia,
+  SocialMediaIconLinks,
+  SocialMediaIcons, SocialMediaLogo, SocialMediaWrapper, WebsiteRights
 } from "./styledFooter";
 
 const Footer = () => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <FooterContainer>
       <FooterWrapper>
-        <FooterLinks>
+        <FooterLinksContainer>
           <FooterLinkWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>About Us</FooterLinkTitle>
@@ -31,10 +31,7 @@ const Footer = () => {
               <FooterLink to="/login">Sponsorships</FooterLink>
             </FooterLinkItems>
           </FooterLinkWrapper>
-        </FooterLinks>
-      </FooterWrapper>
-      <FooterWrapper>
-        <FooterLinks>
+
           <FooterLinkWrapper>
             <FooterLinkItems>
               <FooterLinkTitle>Videos</FooterLinkTitle>
@@ -52,7 +49,50 @@ const Footer = () => {
               <FooterLink to="/login">Twitter</FooterLink>
             </FooterLinkItems>
           </FooterLinkWrapper>
-        </FooterLinks>
+        </FooterLinksContainer>
+        <SocialMedia>
+          <SocialMediaWrapper>
+            <SocialMediaLogo to="/">logo</SocialMediaLogo>
+            <WebsiteRights> J.Laro © {year} All rights reserved.</WebsiteRights>
+            <SocialMediaIcons>
+              <SocialMediaIconLinks
+                href="https://www.facebook.com/"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <FaFacebook />
+              </SocialMediaIconLinks>
+              <SocialMediaIconLinks
+                href="https://www.instagram.com/"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </SocialMediaIconLinks>
+              <SocialMediaIconLinks
+                href="https://www.youtube.com/"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
+              </SocialMediaIconLinks>
+              <SocialMediaIconLinks
+                href="https://www.twitter.com/"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </SocialMediaIconLinks>
+              <SocialMediaIconLinks
+                href="https://www.linkedin.com/"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </SocialMediaIconLinks>
+            </SocialMediaIcons>
+          </SocialMediaWrapper>
+        </SocialMedia>
       </FooterWrapper>
     </FooterContainer>
   );
