@@ -28,7 +28,7 @@ const Hero = () => {
       </HeroBg>
       <HeroContent>
         <HeroH1>Your Website Here</HeroH1>
-        <HeroP>Need a website, no problem.</HeroP>
+        <HeroP>The possibilities are endless</HeroP>
         <HeroBtnWrapper>
           <Button
             to="signup"
