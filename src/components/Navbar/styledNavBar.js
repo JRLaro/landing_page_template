@@ -3,9 +3,9 @@ import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
 
 export const Nav = styled.nav`
-  background: black;
+  background: ${({ scrollNav }) => (scrollNav ? "black" : "transparent")};
   height: 80px;
-  margin-top: -11px;
+  margin-top: -80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,13 +19,13 @@ export const Nav = styled.nav`
   }
 `;
 export const NavContainer = styled.div`
-display: flex;
-justify-content: space-between;
-height: 80px;
-z-index: 1;
-width: 100%
-padding: 0 24px;
-max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  z-index: 1;
+  width: 100%;
+  padding: 0 24px;
+  max-width: 1100px;
 `;
 
 export const NavLogo = styled(LinkRouter)`
@@ -38,27 +38,12 @@ export const NavLogo = styled(LinkRouter)`
   margin-left: 25px;
   font-weight: bold;
   text-decoration: none;
-  position: absolute;
-  top: 50%;
-  left: 10px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
-
-  @media screen and (max-width: 760px) {
-    display: block;
-    margin-left: 35%;
-    ${"" /* margin-right: 50%;  */}
-    ${"" /* display: flex; */}
-  justify-content: center;
-    align-items: center;
-  }
 `;
 
 export const MobileIcon = styled.div`
   display: none;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
     top: 0;
@@ -76,14 +61,15 @@ export const NavMenu = styled.ul`
   text-align: center;
   margin-right: -22px;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
 export const NavItems = styled.li`
-  ${"" /* height: 80px; */}
+  height: 80px;
 `;
+
 export const NavLinks = styled(LinkScroll)`
   color: white;
   display: flex;
@@ -94,7 +80,7 @@ export const NavLinks = styled(LinkScroll)`
   height: 100%;
 
   &.active {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #f9a826;
   }
 `;
 
@@ -102,14 +88,14 @@ export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
 
 export const NavBtnLink = styled(LinkRouter)`
   border-radius: 50px;
-  background: #01bf71;
+  background: #f9a826;
   white-space: nowrap;
   padding: 10px 22px;
   color: #010606;
@@ -117,15 +103,8 @@ export const NavBtnLink = styled(LinkRouter)`
   outline: none;
   border: none;
   cursor: pointer;
-  transition: all 0.2s all ease-in-out;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  margin-right: 25px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  transform: translateY(-50%);
 
   &:hover {
     transition: all 0.2s ease-in-out;
