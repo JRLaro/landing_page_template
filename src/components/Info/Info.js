@@ -1,4 +1,6 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useEffect } from "react";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { Button } from "../Button/Button";
 import {
   InfoContainer,
@@ -30,13 +32,18 @@ const Info = ({
   primary,
   dark
 }) => {
+
+useEffect(() => {
+  Aos.init({duration: 2000});
+}, [])
+
   return (
     <Fragment>
       <InfoContainer lightBg={lightBg} id={id}>
         <InfoWrapper>
           <InfoRow imgStart={!imgStart}>
             <Col1>
-              <TextWrapper>
+              <TextWrapper data-aos='fade-down'>
                 <TopLine>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headLine}</Heading>
                 <Subtitle darkText={darkText}>{desc}</Subtitle>
@@ -48,7 +55,7 @@ const Info = ({
               </TextWrapper>
             </Col1>
             <Col2>
-              <ImgWrap>
+              <ImgWrap data-aos='fade-up'>
                 <Img src={img} alt={alt} />
               </ImgWrap>
             </Col2>
